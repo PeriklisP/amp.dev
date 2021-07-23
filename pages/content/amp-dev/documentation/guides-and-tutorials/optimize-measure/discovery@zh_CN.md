@@ -14,7 +14,7 @@ teaser:
 
 在某些情况下，您可能需要让同一个网页（例如新闻报道网页）同时具有非 AMP 版本和 AMP 版本。试想一下，如果 Google 搜索找到该网页的非 AMP 版本，那么它如何知晓该网页还存在 AMP 版本呢？
 
-### 使用 <link> 关联网页
+### 使用 &lt;link&gt; 关联网页
 
 为了解决此问题，我们通过在 `<head>` 中添加 `<link>` 标记的形式，向非 AMP 网页添加 AMP 网页的相关信息，反之亦然。
 
@@ -91,7 +91,7 @@ teaser:
 
 [/sourcecode]
 
-要查看更多示例（包括备用 HTML 属性语法），请访问 [ampproject 示例文件夹](https://github.com/ampproject/amphtml/tree/master/examples/metadata-examples)。
+要查看更多示例（包括备用 HTML 属性语法），请访问 [ampproject 示例文件夹](https://github.com/ampproject/amphtml/tree/main/examples/metadata-examples)。
 
 [tip type="read-on"] 要详细了解结构化数据，请访问以下资源。
 

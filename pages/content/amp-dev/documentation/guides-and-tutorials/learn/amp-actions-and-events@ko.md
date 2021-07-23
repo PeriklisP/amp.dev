@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -32,7 +32,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] 이 문서는 AMP 웹사이트, 스토리, 광고의 액션 및 이벤트를 설명합니다. AMP 이메일 형식에 대한 내용은 [AMP 이메일의 액션 및 동작](https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md)을 참조하세요. [/tip]
+[tip type="note"] 이 문서는 AMP 웹사이트, 스토리, 광고의 액션 및 이벤트를 설명합니다. AMP 이메일 형식에 대한 내용은 [AMP 이메일의 액션 및 동작](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md)을 참조하세요. [/tip]
 
 요소의 이벤트 핸들러 설치 시 `on` 속성이 사용됩니다. 지원되는 이벤트는 요소에 따라 다릅니다.
 
@@ -57,7 +57,7 @@ eventName:targetId[.methodName[(arg1=value, arg2=value)]][/sourcecode]
   <tr>
     <td><code>targetId</code></td>
     <td>필수</td>
-    <td>요소의 DOM ID 또는 이벤트에 대응하여 액션을 실행하고자 하는 사전 정의된 <a href="#special-targets">특정 대상</a>입니다. 다음 예시에서 <code>targetId</code>는 <code>amp-lightbox</code> 대상, <code>photo-slides</code>의 DOM ID입니다.<pre><amp-lightbox id="photo-slides"></amp-lightbox> <button on="tap:photo-slides">이미지 표시</button></pre>
+    <td>요소의 DOM ID 또는 이벤트에 대응하여 액션을 실행하고자 하는 사전 정의된 <a href="#special-targets">특정 대상</a>입니다. 다음 예시에서 <code>targetId</code>는 <code>amp-lightbox</code> 대상, <code>photo-slides</code>의 DOM ID입니다.<pre>&lt;amp-lightbox id="photo-slides">&lt;/amp-lightbox> &lt;button on="tap:photo-slides">이미지 표시&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -240,7 +240,7 @@ AMP는 모든 HTML 요소(AMP 요소 포함)에서 리스닝할 수 있는 `tap`
   <tr>
     <td><code>changeToLayoutContainer</code></td>
     <td>
-<code>amp-list</code> 레이아웃을 <code>layout="CONTAINTER"</code>로 업데이트하여 <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">동적 크기 변경</a>을 허용합니다.</td>
+<code>amp-list</code> 레이아웃을 <code>layout="CONTAINTER"</code>로 업데이트하여 <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">동적 크기 변경</a>을 허용합니다.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code>(신뢰도 낮음)</td>
@@ -680,15 +680,15 @@ AMP 런타임이 제공하는 `AMP` 대상은 전체 문서에 적용되는 최�
   <tr>
     <td><code>navigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
-      <p>현재 창에서 지정된 URL로 이동하며 지정된 경우 선택적 대상으로 이동합니다(현재 <code>_top</code> 및 <code>_blank </code>만 지원). 새로 연 페이지에서 <a><code>window.opener</code></a> 액세스를 허용하기 위해 <code>_blank</code> 대상을 사용할 경우 <code>opener</code> 매개변수를 선택적으로 지정할 수 있습니다. <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md">표준 URL 대체</a>를 지원합니다.</p>
-      <p><strong>주의:</strong> 웹 크롤러는 <code>AMP.navigateTo</code>를 인식할 수 없으므로 가능하다면 일반 <code><a></code> 링크 사용이 권장됩니다.</p>
+      <p>현재 창에서 지정된 URL로 이동하며 지정된 경우 선택적 대상으로 이동합니다(현재 <code>_top</code> 및 <code>_blank </code>만 지원). 새로 연 페이지에서 <a><code>window.opener</code></a> 액세스를 허용하기 위해 <code>_blank</code> 대상을 사용할 경우 <code>opener</code> 매개변수를 선택적으로 지정할 수 있습니다. <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md">표준 URL 대체</a>를 지원합니다.</p>
+      <p><strong>주의:</strong> 웹 크롤러는 <code>AMP.navigateTo</code>를 인식할 수 없으므로 가능하다면 일반 <code>&lt;a&gt;</code> 링크 사용이 권장됩니다.</p>
     </td>
   </tr>
   <tr>
     <td><code>closeOrNavigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
       <p>허용된 경우 창 닫기를 시도하고 그렇지 않으면 <code>navigateTo</code> 액션과 유사하게 이동합니다. 이전 페이지의 새 창에서 창이 열려 닫아야 할 경우 혹은 창이 열리지 않아 이동해야 할 경우에  "뒤로" 버튼이 필요한 사용 사례에 유용합니다.</p>
-      <p><strong>주의:</strong> 웹 크롤러는 <code>AMP.closeOrNavigateTo</code>를 인식할 수 없으므로 가능하다면 일반 <code><a></code> 링크 사용이 권장됩니다.</p>
+      <p><strong>주의:</strong> 웹 크롤러는 <code>AMP.closeOrNavigateTo</code>를 인식할 수 없으므로 가능하다면 일반 <code>&lt;a&gt;</code> 링크 사용이 권장됩니다.</p>
     </td>
   </tr>
   <tr>

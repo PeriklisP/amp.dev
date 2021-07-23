@@ -8,7 +8,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -30,7 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="ملحوظة"] يغطي هذا المستند الإجراءات والأحداث في تنسيق بريد AMP الإلكتروني، اقرأ [الإجراءات والأحداث](https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md) لمواقع ويب AMP وقصصها وإعلاناتها. [/tip]
+[tip type="ملحوظة"] يغطي هذا المستند الإجراءات والأحداث في تنسيق بريد AMP الإلكتروني، اقرأ [الإجراءات والأحداث](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md) لمواقع ويب AMP وقصصها وإعلاناتها. [/tip]
 
 يتم استخدام السمة `on` لتثبيت معالجات الحدث في العناصر. يتم دعم تلك الأحداث في العنصر.
 
@@ -55,8 +55,8 @@ eventName:targetId[.methodName[(arg1=value, arg2=value)]][/sourcecode]
   <tr>
     <td><code>targetId</code></td>
     <td>نعم</td>
-    <td>هذا هو معرّف نموذج كائن المستند للعنصر، أو <a href="#special-targets">هدف خاص</a> محدد مسبقًا تريد تنفيذ إجراء عليه ردًا على الحدث. في المثال التالي، <code>targetId </code> هو معرف نموذج كائن المستند للهدف <code>amp-lightbox</code>،<code>photo-slides</code>. <pre><amp-lightbox id = "photo-slides"> </amp-lightbox>
-<button on = "tap: photo-slides">Show Images</button></pre>
+    <td>هذا هو معرّف نموذج كائن المستند للعنصر، أو <a href="#special-targets">هدف خاص</a> محدد مسبقًا تريد تنفيذ إجراء عليه ردًا على الحدث. في المثال التالي، <code>targetId </code> هو معرف نموذج كائن المستند للهدف <code>amp-lightbox</code>،<code>photo-slides</code>. <pre>&lt;amp-lightbox id = "photo-slides"> &lt;/amp-lightbox>
+&lt;button on = "tap: photo-slides">Show Images&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -428,7 +428,7 @@ eventName:targetId[.methodName[(arg1=value, arg2=value)]][/sourcecode]
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>تحديث مخطط <code>amp-list</code> إلى <code>layout="CONTAINTER"</code> للسماح <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">بتغيير الحجم الديناميكي</a>.</td>
+    <td>تحديث مخطط <code>amp-list</code> إلى <code>layout="CONTAINTER"</code> للسماح <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">بتغيير الحجم الديناميكي</a>.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code>(انخفاض مستوى الثقة)</td>

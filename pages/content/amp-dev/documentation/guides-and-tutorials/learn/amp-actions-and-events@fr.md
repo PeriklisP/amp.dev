@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -32,7 +32,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] Cette documentation couvre les actions et événements pour les sites Web, les stories et les annonces AMP. Lisez la section [Actions et événements dans les e-mails AMP](https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md) pour le format d'e-mail AMP. [/tip]
+[tip type="note"] Cette documentation couvre les actions et événements pour les sites Web, les stories et les annonces AMP. Lisez la section [Actions et événements dans les e-mails AMP](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md) pour le format d'e-mail AMP. [/tip]
 
 L'attribut `on` est utilisé pour installer des gestionnaires d'événements sur des éléments. Les événements pris en charge dépendent de l'élément.
 
@@ -57,8 +57,8 @@ Consultez le tableau ci-dessous pour une description détaillée de la syntaxe.
   <tr>
     <td><code>targetId</code></td>
     <td>Oui</td>
-    <td>C'est l'identifiant du DOM de l'élément ou une <a href="#special-targets">cible spéciale</a> prédéfinie sur laquelle vous souhaitez exécuter une action en réponse à l'événement. Dans l'exemple suivant, <code>targetId</code> représente l'identifiant du DOM de la cible <code>amp-lightbox</code>, <code>photo-slides</code>.     <pre><amp-lightbox id="photo-slides"></amp-lightbox>
-<button on="tap:photo-slides">Show Images</button></pre>
+    <td>C'est l'identifiant du DOM de l'élément ou une <a href="#special-targets">cible spéciale</a> prédéfinie sur laquelle vous souhaitez exécuter une action en réponse à l'événement. Dans l'exemple suivant, <code>targetId</code> représente l'identifiant du DOM de la cible <code>amp-lightbox</code>, <code>photo-slides</code>.     <pre>&lt;amp-lightbox id="photo-slides">&lt;/amp-lightbox>
+&lt;button on="tap:photo-slides">Show Images&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -243,7 +243,7 @@ L'exemple suivant est possible dans AMP:
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Met à jour la disposition de <code>amp-list</code> vers <code>layout="CONTAINTER"</code> pour permettre <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">le redimensionnement dynamique</a>.</td>
+    <td>Met à jour la disposition de <code>amp-list</code> vers <code>layout="CONTAINTER"</code> pour permettre <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">le redimensionnement dynamique</a>.</td>
   </tr>
   <tr>
     <td>	<code>fetch-error</code> (confiance basse)</td>
@@ -685,14 +685,14 @@ La cible `AMP` est fournie par le runtime AMP et implémente des actions de nive
     <td><code>navigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
       <p>Dirige la fenêtre actuelle vers une URL donnée si elle est spécifiée (prend actuellement uniquement en charge <code>_top</code> et <code>_blank </code>). Le paramètre facultatif <code>opener</code> peut être spécifié si vous utilisez une cible de <code>_blank</code> pour permettre à la page nouvellement ouverte d'accéder à <a><code>window.opener</code></a>. Prend en charge <a>substitutions d'URL standard</a>.</p>
-      <p><strong>Mise en garde:</strong> l'utlisation de liens normaux <code><a></code> est recommandée dans la mesure du possible car <code>AMP.navigateTo</code> n'est pas reconnu par les robots d'exploration.</p>
+      <p><strong>Mise en garde:</strong> l'utlisation de liens normaux <code>&lt;a&gt;</code> est recommandée dans la mesure du possible car <code>AMP.navigateTo</code> n'est pas reconnu par les robots d'exploration.</p>
     </td>
   </tr>
   <tr>
     <td><code>closeOrNavigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
       <p>Tente de fermer la fenêtre si cela est autorisé, sinon l'action dirige de la même manière que l'action <code>navigateTo</code>. Utile pour les cas d'utilisation où un bouton « Retour » peut avoir besoin de fermer la fenêtre si elle a été ouverte dans une nouvelle fenêtre de la page précédente ou de diriger vers elle si elle n'a pas été ouverte.</p>
-      <p><strong>Mise en garde:</strong> l'utlisation de liens normaux <code><a></code> est recommandée dans la mesure du possible car <code>AMP.closeOrNavigateTo</code> n'est pas reconnu par les robots d'exploration.</p>
+      <p><strong>Mise en garde:</strong> l'utlisation de liens normaux <code>&lt;a&gt;</code> est recommandée dans la mesure du possible car <code>AMP.closeOrNavigateTo</code> n'est pas reconnu par les robots d'exploration.</p>
     </td>
   </tr>
   <tr>

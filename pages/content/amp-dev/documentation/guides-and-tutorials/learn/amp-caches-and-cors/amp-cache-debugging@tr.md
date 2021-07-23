@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-debugging.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-debugging.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -51,7 +51,7 @@ Bu adımları izledikten sonra hala bir sorun varsa, aşağıdaki tabloya bakın
       <td rowspan="2">Varlıklar (örneğin, yazı tipleri ve resimler) görünmüyor</td>
       <td>Varlıklar, yanlış MIME türüyle sunulur.</td>
       <td>
-<a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">Kabul edilebilir bir MIME türü</a> belirtin.</td>
+<a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">Kabul edilebilir bir MIME türü</a> belirtin.</td>
     </tr>
     <tr>
       <td>AMP önbelleği varlıklara erişemiyor.</td>
@@ -59,7 +59,7 @@ Bu adımları izledikten sonra hala bir sorun varsa, aşağıdaki tabloya bakın
     </tr>
     <tr>
       <td>
-<code><amp-form></amp-form></code>, <code><amp-list></amp-list></code> gibi dinamik öğeler beklendiği gibi davranmıyor.</td>
+      &lt;amp-form&gt;, &lt;amp-list&gt; gibi dinamik öğeler beklendiği gibi davranmıyor.</td>
       <td>Kırık veya eksik CORS başlıkları.</td>
       <td>Bu bileşenler, AMP Önbelleğinden kaynağınıza çapraz kaynak isteklerinde bulunur. Varsayılan olarak, tarayıcılar bu istekleri engeller. Bu isteklere izin vermek için, <a href="amp-cors-requests.md">tüm önbellekleri</a> listelemeye izin veren <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS başlıklarını</a> yayınlayın.</td>
     </tr>

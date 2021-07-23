@@ -14,7 +14,7 @@ teaser:
 
 In manchen Fällen ist es sinnvoll, sowohl eine AMP Version als auch eine Version ohne AMP derselben Seite zu haben, z. B. für einen Nachrichtenartikel. Aber woher weiß die Google Suche nach dem Fund deiner traditionellen Seite eigentlich, dass eine AMP Version davon existiert?
 
-### Seiten verlinken mit <link>
+### Seiten verlinken mit &lt;link&gt;
 
 Um dieses Problem zu lösen, fügen wir der traditionellen Seite Informationen über die AMP Seite hinzu und umgekehrt. Dazu verwenden wir die Tags `<link>` im Abschnitt `<head>`.
 
@@ -91,7 +91,7 @@ Beispiel:
 
 [/sourcecode]
 
-Weitere Beispiele findest du im [Ordner "examples" in ampproject](https://github.com/ampproject/amphtml/tree/master/examples/metadata-examples) (einschließlich der alternativen Syntax für HTML Attribute).
+Weitere Beispiele findest du im [Ordner "examples" in ampproject](https://github.com/ampproject/amphtml/tree/main/examples/metadata-examples) (einschließlich der alternativen Syntax für HTML Attribute).
 
 [tip type="read-on"] Weitere Informationen zu strukturierten Daten findest du in diesen Ressourcen:
 

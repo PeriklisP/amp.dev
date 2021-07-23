@@ -8,7 +8,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -30,7 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] Cette documentation couvre les actions et événements pour le format d'e-mail AMP. Lisez la section [Actions et événements](https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md) pour les sites Web, les stories et les annonces AMP. [/tip]
+[tip type="note"] Cette documentation couvre les actions et événements pour le format d'e-mail AMP. Lisez la section [Actions et événements](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md) pour les sites Web, les stories et les annonces AMP. [/tip]
 
 L'attribut `on` est utilisé pour installer des gestionnaires d'événements sur les éléments. Les événements pris en charge dépendent de l'élément.
 
@@ -55,8 +55,8 @@ Consultez le tableau ci-dessous pour une description de chaque partie de la synt
   <tr>
     <td><code>targetId</code></td>
     <td>oui</td>
-    <td>C'est l'identifiant du DOM de l'élément ou une <a href="#special-targets">cible spéciale</a> prédéfinie sur laquelle vous souhaitez exécuter une action en réponse à l'événement. Dans l'exemple suivant, <code>targetId</code> représente l'identifiant du DOM de la cible <code>amp-lightbox</code>, <code>photo-slides</code>.     <pre><amp-lightbox id="photo-slides"></amp-lightbox>
-<button on="tap:photo-slides">Show Images</button></pre>
+    <td>C'est l'identifiant du DOM de l'élément ou une <a href="#special-targets">cible spéciale</a> prédéfinie sur laquelle vous souhaitez exécuter une action en réponse à l'événement. Dans l'exemple suivant, <code>targetId</code> représente l'identifiant du DOM de la cible <code>amp-lightbox</code>, <code>photo-slides</code>.     <pre>&lt;amp-lightbox id="photo-slides">&lt;/amp-lightbox>
+&lt;button on="tap:photo-slides">Show Images&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -433,7 +433,7 @@ L'exemple suivant est possible dans AMP:
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Met à jour la mise en page de <code>amp-list</code> vers <code>layout="CONTAINTER"</code> pour permettre <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">le redimensionnement dynamique</a>.</td>
+    <td>Met à jour la mise en page de <code>amp-list</code> vers <code>layout="CONTAINTER"</code> pour permettre <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">le redimensionnement dynamique</a>.</td>
   </tr>
   <tr>
     <td>	<code>fetch-error</code> (confiance basse)</td>

@@ -161,7 +161,7 @@ In questa configurazione vengono definite le seguenti proprietà:
   </tr>
   <tr>
     <td class="col-fourty"><code>login</code></td>
-    <td class="col-twenty"><code>&lt;URL&gt;</code> o<br><Map [string, URL]></td>
+    <td class="col-twenty"><code>&lt;URL&gt;</code> o<br>&lt;Map [string, URL]&gt;</td>
     <td>L'URL HTTPS della pagina di accesso o un insieme di URL per i diversi tipi di pagine di accesso.</td>
   </tr>
   <tr>
@@ -226,7 +226,7 @@ Ecco un esempio di configurazione dell'Accesso AMP:
 
 ### Variabili URL di accesso <a name="access-url-variables"></a>
 
-Al momento di configurare gli URL per vari endpoint, il publisher può utilizzare le variabili di sostituzione. L'elenco completo di queste variabili è definito in [Specifica Variabili AMP](https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md). Inoltre, questa specifica aggiunge alcune variabili specifiche di accesso, ad esempio `READER_ID` e `AUTHDATA`. Alcune delle variabili più pertinenti sono descritte nella seguente tabella:
+Al momento di configurare gli URL per vari endpoint, il publisher può utilizzare le variabili di sostituzione. L'elenco completo di queste variabili è definito in [Specifica Variabili AMP](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md). Inoltre, questa specifica aggiunge alcune variabili specifiche di accesso, ad esempio `READER_ID` e `AUTHDATA`. Alcune delle variabili più pertinenti sono descritte nella seguente tabella:
 
 <table>
   <tr>

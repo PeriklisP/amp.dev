@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -32,7 +32,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"]Dokumentasi ini mencakup tindakan dan peristiwa untuk iklan, cerita, dan situs web AMP. Bacalah [Tindakan dan peristiwa di email AMP](https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md) untuk mengetahui format email AMP. [/tip]
+[tip type="note"]Dokumentasi ini mencakup tindakan dan peristiwa untuk iklan, cerita, dan situs web AMP. Bacalah [Tindakan dan peristiwa di email AMP](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md) untuk mengetahui format email AMP. [/tip]
 
 Atribut `on` digunakan untuk menginstal pengurus (handler) peristiwa pada elemen. Peristiwa-peristiwa yang didukung bergantung pada elemen.
 
@@ -57,8 +57,8 @@ Lihat tabel di bawah ini untuk mengetahui deskripsi setiap bagian sintaks.
   <tr>
     <td><code>targetId</code></td>
     <td>ya</td>
-    <td>Ini adalah ID DOM untuk elemen tersebut, atau <a href="#special-targets">target khusus</a> yang telah ditentukan sebelumnya yang ingin Anda tindak lanjuti sebagai tanggapan atas peristiwa tersebut. Di dalam contoh berikut ini, <code>targetId</code> adalah ID DOM dari target <code>amp-lightbox</code>, <code>photo-slides</code>. <pre><amp-lightbox id = "photo-slides"> </amp-lightbox>
-<button on = "tap: photo-slides"> Tampilkan Gambar</button></pre>
+    <td>Ini adalah ID DOM untuk elemen tersebut, atau <a href="#special-targets">target khusus</a> yang telah ditentukan sebelumnya yang ingin Anda tindak lanjuti sebagai tanggapan atas peristiwa tersebut. Di dalam contoh berikut ini, <code>targetId</code> adalah ID DOM dari target <code>amp-lightbox</code>, <code>photo-slides</code>. <pre>&lt;amp-lightbox id = "photo-slides"> &lt;/amp-lightbox>
+&lt;button on = "tap: photo-slides"> Tampilkan Gambar&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -236,7 +236,7 @@ Contohnya, yang berikut ini mungkin dilakukan di AMP:
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Perbarui tata letak <code>amp-list</code> ke <code>layout="CONTAINTER"</code> untuk memungkinkan <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">pengubahan ukuran dinamis</a>.</td>
+    <td>Perbarui tata letak <code>amp-list</code> ke <code>layout="CONTAINTER"</code> untuk memungkinkan <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">pengubahan ukuran dinamis</a>.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code> (kepercayaan rendah)</td>
@@ -674,15 +674,15 @@ Target `AMP` disediakan oleh runtime AMP dan menerapkan tindakan tingkat tinggi 
   <tr>
     <td><code>navigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
-      <p>Menavigasikan jendela saat ini ke URL yang diberikan, ke target opsional yang telah ditentukan jika diberikan (saat ini hanya mendukung <code>_top</code> dan <code>_blank </code>). Parameter <code>opener</code> yang opsional dapat ditentukan ketika menggunakan target <code>_blank</code> untuk memungkinkan halaman yang baru dibuka mengakses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code></a>. Mendukung <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md">pengganti URL standar</a>.</p>
-      <p><strong>Peringatan:</strong> Menggunakan tautan normal <code><a></code> direkomendasikan jika memungkinkan karena <code>AMP.navigateTo</code> tidak dikenali oleh crawler web.</p>
+      <p>Menavigasikan jendela saat ini ke URL yang diberikan, ke target opsional yang telah ditentukan jika diberikan (saat ini hanya mendukung <code>_top</code> dan <code>_blank </code>). Parameter <code>opener</code> yang opsional dapat ditentukan ketika menggunakan target <code>_blank</code> untuk memungkinkan halaman yang baru dibuka mengakses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code></a>. Mendukung <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md">pengganti URL standar</a>.</p>
+      <p><strong>Peringatan:</strong> Menggunakan tautan normal <code>&lt;a&gt;</code> direkomendasikan jika memungkinkan karena <code>AMP.navigateTo</code> tidak dikenali oleh crawler web.</p>
     </td>
   </tr>
   <tr>
     <td><code>closeOrNavigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
       <p>Mencoba menutup jendela jika diizinkan, jika tidak, akan bernavigasi mirip Tindakan <code>navigateTo</code>. Berguna untuk kasus penggunaan di mana tombol “Back” (Kembali) mungkin perlu untuk menutup jendela jika dibuka di jendela baru dari halaman sebelumnya atau bernavigasi jika tidak dibuka.</p>
-      <p><strong>Peringatan:</strong> Menggunakan tautan normal <code><a></code> direkomendasikan jika memungkinkan karena <code>AMP.closeOrNavigateTo</code> tidak dikenali oleh crawler web.</p>
+      <p><strong>Peringatan:</strong> Menggunakan tautan normal <code>&lt;a&gt;</code> direkomendasikan jika memungkinkan karena <code>AMP.closeOrNavigateTo</code> tidak dikenali oleh crawler web.</p>
     </td>
   </tr>
   <tr>

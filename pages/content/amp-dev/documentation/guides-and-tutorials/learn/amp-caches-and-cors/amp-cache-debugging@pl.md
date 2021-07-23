@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-debugging.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-debugging.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -50,14 +50,14 @@ Jeśli po wykonaniu tych czynności problem nie ustąpi, sprawdź poniższą tab
     <tr>
       <td rowspan="2">Nie są wyświetlane zasoby (np. czcionki i obrazy)</td>
       <td>Zasoby są serwowane z niewłaściwym typem MIME.</td>
-      <td>Określ <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">dopuszczalny typ MIME</a>.</td>
+      <td>Określ <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">dopuszczalny typ MIME</a>.</td>
     </tr>
     <tr>
       <td>Serwer buforujący AMP nie może uzyskać dostępu do zasobów.</td>
       <td>Upewnij się, że serwer buforujący AMP ma dostęp do Twoich zasobów i nie jest blokowany przez adres IP, program użytkownika itd. (<a href="https://support.google.com/webmasters/answer/1061943?hl=en">Lista programów użytkownika używanych przez robota indeksującego Google</a>).</td>
     </tr>
     <tr>
-      <td>Elementy dynamiczne, takie jak <code><amp-form></amp-form></code>, <kod><amp-list></amp-list> nie działają zgodnie z oczekiwaniami.</kod>
+      <td>Elementy dynamiczne, takie jak <code>&lt;amp-form&gt;</code>, <code>&lt;amp-list&gt;</code> nie działają zgodnie z oczekiwaniami.
 </td>
       <td>Uszkodzone lub brakujące nagłówki CORS.</td>
       <td>Składniki te generują żądania danych z różnych źródeł, wysyłane z serwera buforującego AMP do Twojego źródła. Przeglądarki domyślnie blokują te żądania. Aby zezwolić na te żądania, należy emitować nagłówki <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, zezwalające na umieszczenie na liście dozwolonych <a href="amp-cors-requests.md">wszystkich serwerów buforujących</a>.</td>

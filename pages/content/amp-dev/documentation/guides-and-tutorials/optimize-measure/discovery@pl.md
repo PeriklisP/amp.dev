@@ -14,7 +14,7 @@ teaser:
 
 W niektórych przypadkach można serwować zarówno wersję tej samej strony bez AMP jak i z AMP, na przykład artykuł informacyjny. Rozważ to: jeśli wyszukiwarka Google znajdzie wersję tej strony bez AMP, skąd ma wiedzieć, że istnieje wersja AMP?
 
-### Powiązywanie stron znacznikami <link>
+### Powiązywanie stron znacznikami &lt;link&gt;
 
 Aby rozwiązać ten problem, dodajemy informację o stronie AMP do strony bez AMP i odwrotnie za pomocą znaczników `<link>` w sekcji `<head>`.
 
@@ -91,7 +91,7 @@ Przykład:
 
 [/sourcecode]
 
-Więcej przykładów można znaleźć w [folderze ampproject examples](https://github.com/ampproject/amphtml/tree/master/examples/metadata-examples), włącznie z alternatywną składnią atrybutu HTML).
+Więcej przykładów można znaleźć w [folderze ampproject examples](https://github.com/ampproject/amphtml/tree/main/examples/metadata-examples), włącznie z alternatywną składnią atrybutu HTML).
 
 [tip type="read-on"] Odwiedź te zasoby, aby uzyskać więcej informacji na temat danych strukturalnych:
 

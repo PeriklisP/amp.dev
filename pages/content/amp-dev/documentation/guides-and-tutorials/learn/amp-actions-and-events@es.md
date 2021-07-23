@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -32,7 +32,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] Este documento trata sobre las acciones y eventos que puede usar en los sitios web, historias y anuncios de AMP. Lea sobre las [Acciones y eventos en el correo electrónico de AMP](https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md) para el formato del correo electrónico de AMP. [/tip]
+[tip type="note"] Este documento trata sobre las acciones y eventos que puede usar en los sitios web, historias y anuncios de AMP. Lea sobre las [Acciones y eventos en el correo electrónico de AMP](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md) para el formato del correo electrónico de AMP. [/tip]
 
 El atributo `on` se utiliza para instalar controladores de eventos en los elementos. Los eventos que sean compatibles dependerán del elemento.
 
@@ -238,7 +238,7 @@ event.valueAsNumber</pre>
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Actualiza el diseño de <code>amp-list</code> a <code>layout="CONTAINTER"</code> para permitir <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">cambios en el tamaño de forma dinámica</a>.</td>
+    <td>Actualiza el diseño de <code>amp-list</code> a <code>layout="CONTAINTER"</code> para permitir <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">cambios en el tamaño de forma dinámica</a>.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code>(poco confiable)</td>
@@ -680,15 +680,15 @@ El objetivo de `AMP` es proporcionado por el tiempo de ejecución e implementa a
   <tr>
     <td><code>navigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
-      <p>Navega en la ventana actual hacia una URL determinada o hasta el objetivo opcional que se especificó, si se proporcionó alguno (actualmente solo es compatible con <code>_top</code> y <code>_blank </code>). El parámetro opcional <code>opener</code> puede especificarse cuando se utiliza un <code>_blank</code> como objetivo para permitir que la página recién abierta acceda a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener </code></a>. Es compatible con las <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md">sustituciones estándar en las URL</a>.</p>
-      <p><strong>Advertencia:</strong> Se recomienda utilizar los enlaces normales <code><a></code> siempre que sea posible, ya que <code>AMP.navigateTo</code> no es reconocido por los rastreadores web.</p>
+      <p>Navega en la ventana actual hacia una URL determinada o hasta el objetivo opcional que se especificó, si se proporcionó alguno (actualmente solo es compatible con <code>_top</code> y <code>_blank </code>). El parámetro opcional <code>opener</code> puede especificarse cuando se utiliza un <code>_blank</code> como objetivo para permitir que la página recién abierta acceda a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener </code></a>. Es compatible con las <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md">sustituciones estándar en las URL</a>.</p>
+      <p><strong>Advertencia:</strong> Se recomienda utilizar los enlaces normales <code>&lt;a&gt;</code> siempre que sea posible, ya que <code>AMP.navigateTo</code> no es reconocido por los rastreadores web.</p>
     </td>
   </tr>
   <tr>
     <td><code>closeOrNavigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
       <p>Su objetivo es tratar de cerrar la ventana, cuando sea posible, de lo contrario permite navegar de manera similar a la acción <code>navigateTo</code>. Es útil para usarse en aquellos casos dónde es necesario cerrar una ventana mediante el botón “Regresar”, cuando se haya abierto una ventana nueva a partir de la página anterior o navegar si no se abrió.</p>
-      <p><strong>Advertencia:</strong> Se recomienda utilizar los enlaces normales <code><a></code> siempre que sea posible, ya que <code>AMP.closeOrNavigateTo</code> no es reconocido por los rastreadores web.</p>
+      <p><strong>Advertencia:</strong> Se recomienda utilizar los enlaces normales <code>&lt;a&gt;</code> siempre que sea posible, ya que <code>AMP.closeOrNavigateTo</code> no es reconocido por los rastreadores web.</p>
     </td>
   </tr>
   <tr>

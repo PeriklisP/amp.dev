@@ -12,7 +12,7 @@ toc: 'true'
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-cors-requests.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cors-requests.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -157,7 +157,7 @@ AMP-Same-Origin: true
 
 CORS リクエストを検証した後に生成される HTTP レスポンスには、以下のヘッダーが含まれている必要があります。
 
-##### Access-Control-Allow-Origin: <origin> </origin><a name="access-control-allow-origin-origin"></a>
+##### Access-Control-Allow-Origin: &lt;origin&gt; <a name="access-control-allow-origin-origin"></a>
 
 このヘッダーは、<code>origin</code> は CORS <code>Origin</code> リクエストヘッダーで許可されたリクエスト元のオリジン（<code>"https://<サイト運営者のサブドメイン>.cdn.ampproject.org"</code> など）を参照するという <a href="https://www.w3.org/TR/cors/">W3 CORS Spec</a> の要件です。
 

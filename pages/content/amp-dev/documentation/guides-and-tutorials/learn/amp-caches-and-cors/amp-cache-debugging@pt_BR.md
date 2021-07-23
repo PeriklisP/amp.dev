@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-debugging.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-debugging.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -50,14 +50,14 @@ Se você ainda tiver problemas após seguir estas etapas, verifique a tabela aba
     <tr>
       <td rowspan="2">Os ativos (por exemplo, fontes e imagens) não aparecem</td>
       <td>Os ativos são servidos com o componente MIME incorreto.</td>
-      <td>Indique um <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">componente MIME aceito</a>.</td>
+      <td>Indique um <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">componente MIME aceito</a>.</td>
     </tr>
     <tr>
       <td>O cache do AMP não pode acessar os ativos.</td>
       <td>Verifique se o AMP Cache pode acessar seus ativos e se não está bloqueado por um endereço IP ou cliente, etc.(<a href="https://support.google.com/webmasters/answer/1061943?hl=en">Lista de clientes usados pelo crawler do Google</a>).</td>
     </tr>
     <tr>
-      <td>Elementos dinâmicos tais como <code><amp-form></amp-form></code>, <code><amp-list></amp-list></code>, não se comportam como esperado.</td>
+      <td>Elementos dinâmicos tais como <code>&lt;amp-form&gt;</code>, <code>&lt;amp-list&gt;</code>, não se comportam como esperado.</td>
       <td>Cabeçalhos CORS com erro ou ausentes.</td>
       <td>Esses componentes fazem solicitações cross-origin do AMP Cache até sua origem. Por default, os navegadores bloqueiam essas solicitações. Para permitir essas requisições, emita <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">cabeçalhos CORS</a> que liberem <a href="amp-cors-requests.md">todos os caches</a>.</td>
     </tr>

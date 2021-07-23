@@ -87,7 +87,7 @@ Pour afficher des images dans une annonce Lightbox, vous pouvez également utili
         <td width="40%"><strong>scrollable (facultatif)</strong></td>
         <td>Lorsque l'attribut <code>scrollable</code> est utilisé, l'internaute peut faire défiler le contenu de l'annonce Lightbox si sa taille est supérieure à la hauteur définie pour ce mode.
           <br><br>
-            <strong>Remarque</strong> : L'attribut <code>scrollable</code> n'est pas autorisé lorsque l'élément <code><amp-lightbox></code> est utilisé dans une annonce AMP HTML. Pour plus d'informations, consultez la section <a href="#a4a">Utiliser amp-lightbox dans des annonces AMP HTML</a>.</td>
+            <strong>Remarque</strong> : L'attribut <code>scrollable</code> n'est pas autorisé lorsque l'élément <code>&lt;amp-lightbox&gt;</code> est utilisé dans une annonce AMP HTML. Pour plus d'informations, consultez la section <a href="#a4a">Utiliser amp-lightbox dans des annonces AMP HTML</a>.</td>
           </tr>
           <tr>
             <td width="40%"><strong>scrollable (facultatif)</strong></td>
@@ -151,7 +151,7 @@ Dans les exemples ci-dessous, vous pouvez voir comment la transition recherche u
 
 ##### Sur des friendly iframes (provenant, par exemple, d'un cache AMP) <a name="on-friendly-iframes-eg-coming-from-an-amp-cache"></a>
 
-<amp-img alt="annonce Lightbox dans un friendly iframe" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
+<amp-img alt="annonce Lightbox dans un friendly iframe" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
     <img alt="annonce Lightbox dans un friendly iframe" src="../../spec/img/lightbox-ad-fie.gif">
     </noscript>
@@ -159,7 +159,7 @@ Dans les exemples ci-dessous, vous pouvez voir comment la transition recherche u
 
 ##### Sur des cadres iFrame tiers (par exemple, en dehors du cache AMP) <a name="on-third-party-iframes-eg-outside-the-amp-cache"></a>
 
-<amp-img alt="annonce Lightbox dans un iFrame 3p" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
+<amp-img alt="annonce Lightbox dans un iFrame 3p" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
     <img alt="annonce Lightbox dans un iFrame 3p" src="../../spec/img/lightbox-ad-3p.gif">
     </noscript>

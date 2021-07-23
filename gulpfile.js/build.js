@@ -34,14 +34,14 @@ const git = require('@lib/utils/git');
 const ComponentReferenceImporter = require('@lib/pipeline/componentReferenceImporter');
 const SpecImporter = require('@lib/pipeline/specImporter');
 const RecentGuides = require('@lib/pipeline/recentGuides');
-const gulpSass = require('@mr-hope/gulp-sass');
+const gulpSass = require('gulp-sass')(require('sass'));
 const importRoadmap = require('./import/importRoadmap.js');
 const importWorkingGroups = require('./import/importWorkingGroups.js');
 const importAdVendorList = require('./import/importAdVendorList.js');
 const {thumborImageIndex} = require('./thumbor.js');
 const CleanCSS = require('clean-css');
-const validatorRules = require('@ampproject/toolbox-validator-rules');
 const {PIXI_CLOUD_ROOT} = require('@lib/utils/project').paths;
+const {copyFile} = require('fs/promises');
 
 // Path of the grow test pages for filtering in the grow podspec.yaml
 const TEST_CONTENT_PATH_REGEX = '^/tests/';
@@ -102,7 +102,7 @@ function sass() {
 
   return gulp
     .src(`${project.paths.SCSS}/**/[^_]*.scss`)
-    .pipe(gulpSass.sassSync(options))
+    .pipe(gulpSass.sync(options))
     .on('error', function (e) {
       console.error(e);
       // eslint-disable-next-line no-invalid-this
@@ -170,31 +170,6 @@ function buildPixiFunctions() {
   return sh('npm install', {
     workingDir: PIXI_CLOUD_ROOT,
   });
-}
-
-/**
- * Generate component versions
- * @return {Promise}
- */
-async function buildComponentVersions() {
-  const rules = await validatorRules.fetch();
-  const componentVersions = {};
-  rules.extensions.forEach((e) => {
-    const versions = e.version.filter((v) => v !== 'latest');
-    if (
-      componentVersions[e.name] &&
-      parseFloat(componentVersions[e.name]) >=
-        parseFloat(versions[versions.length - 1])
-    ) {
-      return;
-    }
-    componentVersions[e.name] = versions[versions.length - 1];
-  });
-  const content = JSON.stringify(componentVersions, null, 2);
-  const dir = path.join(project.paths.DIST, 'static/files');
-
-  mkdirp(dir);
-  fs.writeFileSync(path.join(dir, 'component-versions.json'), content, 'utf-8');
 }
 
 /**
@@ -284,12 +259,12 @@ function buildPrepare(done) {
   return gulp.series(
     // Build playground and boilerplate that early in the flow as they are
     // fairly quick to build and would be annoying to eventually fail downstream
+    buildSamples,
     gulp.parallel(
-      buildComponentVersions,
       buildPlayground,
       buildBoilerplate,
       buildPixi,
-      buildSamples,
+      buildFrontend21,
       importAll,
       zipTemplates
     ),
@@ -306,6 +281,7 @@ function buildPrepare(done) {
         './boilerplate/lib/',
         './boilerplate/dist/',
         './playground/dist/',
+        './frontend21/dist/',
         './frontend/templates/views/partials/pixi/webpack.j2',
         './.cache/',
         './examples/static/samples/samples.json',
@@ -337,6 +313,7 @@ function unpackArtifacts() {
     through.obj(async (artifact, encoding, callback) => {
       console.log('Unpacking', artifact.path, '...');
       await sh(`tar xf ${artifact.path}`);
+      await sh(`rm ${artifact.path}`);
       stream.push(artifact);
       callback();
     })
@@ -376,6 +353,25 @@ function buildPages(done) {
       return gulp
         .src(`${project.paths.GROW_BUILD_DEST}/shared/*.html`)
         .pipe(gulp.dest(`${project.paths.PAGES_DEST}/shared`));
+    },
+    // eslint-disable-next-line prefer-arrow-callback
+    async function publishPages() {
+      if (!config.options.locales.includes(config.getDefaultLocale())) {
+        console.log(
+          'Skipping page publishing. Default language is not build, only:',
+          config.options.locales
+        );
+        return;
+      }
+
+      await copyFile(
+        `${project.paths.GROW_BUILD_DEST}/index-2021.html`,
+        `${project.paths.PAGES_DEST}/index.html`
+      );
+      await copyFile(
+        `${project.paths.GROW_BUILD_DEST}/about/websites-2021.html`,
+        `${project.paths.PAGES_DEST}/about/websites.html`
+      );
     },
     // eslint-disable-next-line prefer-arrow-callback
     function sitemap() {
@@ -455,6 +451,7 @@ function collectStatics(done) {
     .src([
       project.absolute('pages/static/**/*'),
       project.absolute('examples/static/**/*'),
+      project.absolute('frontend21/dist/static/**/*'),
     ])
     .pipe(
       through.obj(async function (file, encoding, callback) {
@@ -534,8 +531,8 @@ function persistBuildInfo(done) {
     'by': process.env.GITHUB_ACTOR || git.user(),
     'environment': config.environment,
     'commit': {
-      'sha': process.env.GITHUB_SHA || git.version,
-      'message': git.message,
+      'sha': process.env.GITHUB_SHA || git.version(),
+      'message': git.message(),
     },
   };
 
@@ -555,7 +552,6 @@ exports.buildFrontend = buildFrontend;
 exports.buildSamples = buildSamples;
 exports.zipTemplates = zipTemplates;
 exports.buildPages = buildPages;
-exports.buildComponentVersions = buildComponentVersions;
 exports.buildPrepare = buildPrepare;
 exports.minifyPages = minifyPages;
 exports.unpackArtifacts = unpackArtifacts;

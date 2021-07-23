@@ -14,7 +14,7 @@ teaser:
 
 어떤 경우에는 비 AMP 버전과 AMP 버전을 모두 지원하는 페이지가 필요할 수 있습니다. 예를 들면 뉴스 기사 등이 이에 해당됩니다. 만약 Google 검색에서 해당 페이지의 비 AMP 버전을 찾은 경우 동일 페이지의 AMP 버전이 있는지 어떻게 알 수 있을까요?
 
-### <link>로 페이지 연결
+### &lt;link&gt;로 페이지 연결
 
 이 문제를 해결하기 위해 비 AMP 페이지에 `<head>`의 `<link>` 태그 형식으로 AMP 페이지에 관한 정보를 추가할 수 있으며, 그 반대의 경우도 가능합니다.
 
@@ -91,7 +91,7 @@ teaser:
 
 [/sourcecode]
 
-대체 HTML 속성 구문을 포함한 더 많은 예시는 [AMP 프로젝트 예시 폴더](https://github.com/ampproject/amphtml/tree/master/examples/metadata-examples)에서 찾아볼 수 있습니다.
+대체 HTML 속성 구문을 포함한 더 많은 예시는 [AMP 프로젝트 예시 폴더](https://github.com/ampproject/amphtml/tree/main/examples/metadata-examples)에서 찾아볼 수 있습니다.
 
 [tip type="read-on"] 구조화된 데이터에 관한 자세한 내용은 다음 리소스에서 확인하세요.
 

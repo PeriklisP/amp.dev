@@ -4,11 +4,9 @@
 @import '../../frontend/scss/components/atoms/_color.scss';
 
 @import 'variables.scss';
+@import 'functions.scss';
 @import 'mixins.scss';
 
-@import 'components/sidebar.scss';
-@import 'components/sidebar-toggle.scss';
-@import 'components/toc.scss';
 @import 'components/section.scss';
 @import 'components/text-media.scss';
 @import 'components/text-block.scss';
@@ -16,31 +14,36 @@
 @import 'components/pie-chart.scss';
 @import 'components/highlight-stripes.scss';
 @import 'components/header.scss';
+
 @import 'components/format-toggle.scss';
 @import 'components/banner.scss';
 @import 'components/language-selector.scss';
 @import 'components/search-trigger.scss';
 @import 'components/nav-link.scss';
 @import 'components/icon.scss';
-@import 'components/content.scss';
-@import 'components/icon-text.scss';
-@import 'components/teaser-grid.scss';
-@import 'components/teaser-component.scss';
-@import 'components/table-component.scss';
-@import 'components/component-intro.scss';
+@import 'components/content/stage.scss';
+@import 'components/content/center-stage.scss';
+@import 'components/content/cards.scss';
+@import 'components/home/home-stage.scss';
+@import 'components/home/formats.scss';
+@import 'components/content/teaser-carousel.scss';
+@import 'components/content/teaser.scss';
+@import 'components/content/intro.scss';
+@import 'components/extra/about/components-showcase.scss';
 @import 'components/code-snippet.scss';
-@import 'components/code-preview.scss';
-@import 'components/copy-script.scss';
-@import 'components/clip.scss';
-@import 'components/breadcrumbs.scss';
-@import 'components/tag.scss';
-@import 'components/filter-bubbles-list.scss';
-@import 'components/pill.scss';
+@import 'components/content/circular-icon.scss';
+@import 'components/content/logo-stage.scss';
+@import 'components/extra/documentation/text-aside.scss';
+@import 'components/content/link.scss';
+@import 'components/extra/home/newsletter.scss';
+
+html,
+body {
+  color: color('charade');
+}
 
 main {
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  grid-gap: 15px;
+  @include grid;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -49,6 +52,7 @@ main {
 
   @include respond-to('large') {
     grid-gap: 30px;
+    max-width: 1920px;
   }
 }
 
@@ -70,28 +74,65 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0.3em;
+  color: inherit;
 }
 
-h1 {
+h1,
+.#{project('h1')} {
   @include respond-to('small') {
     font-size: 52px;
   }
 }
 
-h3 {
+h2,
+.#{project('h2')} {
+  font-size: 2.4em;
+}
+
+h3,
+.#{project('h3')} {
   font-size: 20px;
 }
 
-h4 {
+h4,
+.#{project('h4')} {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5,
+.#{project('h5')} {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+}
+
+h6,
+.#{project('h6')} {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+}
+
+a {
   font-size: 16px;
 }
 
-p {
+p,
+.#{project('p')} {
   max-width: 920px;
   font-size: 16px;
-  line-height: 1.63;
+  line-height: 1.625;
   margin-top: 1.1em;
   margin-bottom: 0;
+  color: inherit;
+}
+
+.#{project('p')} {
+  &-large {
+    font-size: 18px;
+    line-height: 1.78;
+  }
 }
 
 button {
@@ -111,7 +152,6 @@ p code {
   font-weight: 500;
   word-break: normal;
   color: color('black');
-  background: color('iron');
   font-size: 0.9em;
 }
 
@@ -139,22 +179,6 @@ select {
 
 figure {
   margin: 0;
-}
-
-figcaption {
-  margin-top: 0.3em;
-  margin-left: auto;
-  font-size: 14px;
-  line-height: 1.71;
-
-  @include respond-to('medium') {
-    max-width: 80%;
-  }
-
-  span {
-    margin-top: 10px;
-    font-size: 12px;
-  }
 }
 
 svg {

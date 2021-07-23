@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-debugging.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-debugging.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -50,14 +50,14 @@ Jika Anda masih mengalami masalah setelah mengikuti langkah-langkah ini, periksa
     <tr>
       <td rowspan="2">Aset (cth., font dan gambar) tidak muncul</td>
       <td>Aset disajikan dengan jenis MIME yang tidak benar.</td>
-      <td>Tentukan sebuah <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">jenis MIME yang dapat diterima</a>.</td>
+      <td>Tentukan sebuah <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-cache-guidelines.md#guidelines-accepted-mime-types">jenis MIME yang dapat diterima</a>.</td>
     </tr>
     <tr>
       <td>Cache AMP tidak dapat mengakses aset.</td>
       <td>Pastikan Cache AMP dapat mengakses aset Anda dan bahwa ia tidak diblokir oleh sebuah alamat IP, atau agen pengguna, dll. (<a href="https://support.google.com/webmasters/answer/1061943?hl=en">Daftar agen pengguna yang digunakan oleh pengambil Google</a>).</td>
     </tr>
     <tr>
-      <td>Elemen dinamis, seperti <code><amp-form></amp-form></code>, <code><amp-list></amp-list></code>, tidak berperilaku sebagaimana diharapkan.</td>
+      <td>Elemen dinamis, seperti <code>&lt;amp-form&gt;</code>, <code>&lt;amp-list&gt;</code>, tidak berperilaku sebagaimana diharapkan.</td>
       <td>Tajuk CORS tidak ada atau rusak</td>
       <td>Komponen-komponen ini membuat permintaan lintas asal dari Cache AMP ke asal Anda. Sebagai default, browser akan memblokir permintaan ini. Untuk mengizinkan permintaan ini, masukkan <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">tajuk CORS</a> yang mencantumkan daftar <a href="amp-cors-requests.md">semua cache</a> yang diizinkan.</td>
     </tr>

@@ -93,7 +93,7 @@ per mostrare immagini in una lightbox, puoi usare anche il componente [`<amp-ima
                   <td width="40%"><strong>scrollable (facoltativo)</strong></td>
                   <td>Quando è presente l'attributo <code>scrollable</code>, il contenuto della lightbox può scorrere quando supera l'altezza della lightbox.
                     <br><br>
-                      <strong>Nota</strong>: l'attributo <code>scrollable</code> non è consentito se utilizzi <code><amp-lightbox></code> all'interno di un annuncio HTML AMP. Per ulteriori dettagli, consulta la sezione <a href="#a4a">Utilizzare amp-lightbox in annunci HTML AMP</a>.</td>
+                      <strong>Nota</strong>: l'attributo <code>scrollable</code> non è consentito se utilizzi <code>&lt;amp-lightbox&gt;</code> all'interno di un annuncio HTML AMP. Per ulteriori dettagli, consulta la sezione <a href="#a4a">Utilizzare amp-lightbox in annunci HTML AMP</a>.</td>
                     </tr>
                     <tr>
                       <td width="40%"><strong>scrollable (facoltativo)</strong></td>
@@ -157,7 +157,7 @@ Negli esempi riportati di seguito, dimostriamo come si presenta la transizione p
 
 ##### In iframe semplici, ad esempio, provenienti da cache AMP <a name="on-friendly-iframes-eg-coming-from-an-amp-cache"></a>
 
-<amp-img alt="lightbox ad in friendly iframe" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
+<amp-img alt="lightbox ad in friendly iframe" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
     <img alt="lightbox ad in friendly iframe" src="../../spec/img/lightbox-ad-fie.gif">
     </noscript>
@@ -165,7 +165,7 @@ Negli esempi riportati di seguito, dimostriamo come si presenta la transizione p
 
 ##### In iframe di terze parti, ad esempio, esterni a cache AMP <a name="on-third-party-iframes-eg-outside-the-amp-cache"></a>
 
-<amp-img alt="lightbox ad in 3p iframe" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
+<amp-img alt="lightbox ad in 3p iframe" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
     <img alt="lightbox ad in 3p iframe" src="../../spec/img/lightbox-ad-3p.gif">
     </noscript>

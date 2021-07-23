@@ -24,7 +24,6 @@ This sample showcases how to build a product page in AMP HTML.
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
@@ -836,7 +835,7 @@ This sample showcases how to build a product page in AMP HTML.
       amp-redirect-to:<a href="http://ampbyexample.com/shopping_cart/?clientid=amp-123456789">http://ampbyexample.com/shopping_cart/?clientid=amp-123456789</a></p>
      -->
 
-    <!-- We use the `CLIENT_ID` variable to identify the user, this enables storing a shopping cart between repeated visits of an AMP page (either via the AMP Cache or the original host). This variable can be used inside an amp-form by declaring an hidden input value with `default-value="CLIENT_ID(cart)`. Read more about variable substitution [here](https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md). -->
+    <!-- We use the `CLIENT_ID` variable to identify the user, this enables storing a shopping cart between repeated visits of an AMP page (either via the AMP Cache or the original host). This variable can be used inside an amp-form by declaring an hidden input value with `default-value="CLIENT_ID(cart)`. Read more about variable substitution [here](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md). -->
 
       <form id="order" method="POST"
             action-xhr="/documentation/examples/e-commerce/shopping_cart/add-to-cart"

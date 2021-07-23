@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -32,7 +32,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"]Diese Dokumentation beschreibt Aktionen und Events für AMP Websites, Storys und Ads. Infos über das AMP E-Mail Format findest du in [Aktionen und Events in AMP E-Mail](https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md). [/tip]
+[tip type="note"]Diese Dokumentation beschreibt Aktionen und Events für AMP Websites, Storys und Ads. Infos über das AMP E-Mail Format findest du in [Aktionen und Events in AMP E-Mail](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md). [/tip]
 
 Das Attribut `on` wird verwendet, um Event Handler für Elemente zu installieren.
 
@@ -57,7 +57,7 @@ Die nachfolgenden Tabelle beschreibt die einzelnen Elemente der Syntax.
   <tr>
     <td><code>targetId</code></td>
     <td>ja</td>
-    <td>Das ist die DOM ID für das Element oder ein vordefiniertes <a href="#special-targets">besonderes Ziel</a>, für das eine Aktion als Reaktion auf das Event ausgeführt werden soll. Im folgenden Beispiel ist die <code>targetId</code> die DOM ID des Ziels <code>amp-lightbox</code>, <code>photo-slides</code>. <pre><amp-lightbox id="photo-slides"></amp-lightbox> <button on="tap:photo-slides">Bilder anzeigen</button></pre>
+    <td>Das ist die DOM ID für das Element oder ein vordefiniertes <a href="#special-targets">besonderes Ziel</a>, für das eine Aktion als Reaktion auf das Event ausgeführt werden soll. Im folgenden Beispiel ist die <code>targetId</code> die DOM ID des Ziels <code>amp-lightbox</code>, <code>photo-slides</code>. <pre>&lt;amp-lightbox id="photo-slides">&lt;/amp-lightbox> &lt;button on="tap:photo-slides">Bilder anzeigen&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -235,7 +235,7 @@ In AMP ist beispielsweise Folgendes möglich:
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Aktualisiert das Layout von <code>amp-list</code> zu <code>layout="CONTAINTER"</code>, um eine <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">dynamische Größenänderung</a> zu ermöglichen.</td>
+    <td>Aktualisiert das Layout von <code>amp-list</code> zu <code>layout="CONTAINTER"</code>, um eine <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">dynamische Größenänderung</a> zu ermöglichen.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code>(low-trust)</td>
@@ -673,15 +673,15 @@ Das Ziel `AMP` wird von der AMP Runtime bereitgestellt und implementiert Aktione
   <tr>
     <td><code>navigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
-      <p>Navigiert das aktuelle Fenster zur angegebenen URL oder zum optional definierten Ziel, sofern angegeben (unterstützt derzeit nur <code>_top</code> und <code>_blank </code>). Der optionale Parameter <code>opener</code> kann angegeben werden, wenn ein Ziel von <code>_blank</code> verwendet wird, damit die neu geöffnete Seite auf <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code></a> zugreifen kann. Unterstützt <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md">standardmäßige URL <br>Substitutionen</a>.</p>
-      <p><strong>Warnung:</strong> Es wird empfohlen, nach Möglichkeit normale <code><a></code> Links zu verwenden, da <code>AMP.navigateTo</code> von Webcrawlern nicht erkannt wird.</p>
+      <p>Navigiert das aktuelle Fenster zur angegebenen URL oder zum optional definierten Ziel, sofern angegeben (unterstützt derzeit nur <code>_top</code> und <code>_blank </code>). Der optionale Parameter <code>opener</code> kann angegeben werden, wenn ein Ziel von <code>_blank</code> verwendet wird, damit die neu geöffnete Seite auf <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code></a> zugreifen kann. Unterstützt <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md">standardmäßige URL <br>Substitutionen</a>.</p>
+      <p><strong>Warnung:</strong> Es wird empfohlen, nach Möglichkeit normale <code>&lt;a&gt;</code> Links zu verwenden, da <code>AMP.navigateTo</code> von Webcrawlern nicht erkannt wird.</p>
     </td>
   </tr>
   <tr>
     <td><code>closeOrNavigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
       <p>Versucht, das Fenster zu schließen, sofern dies zulässig ist. Andernfalls wird ähnlich wie bei der Aktion <code>navigateTo</code> navigiert. Nützlich für Use Cases, in denen es sein kann, dass eine Schaltfläche "Zurück" das Fenster schließen muss, wenn es in einem neuen Fenster von der vorherigen Seite geöffnet wurde, oder wenn eine Navigation erforderlich ist, wenn das Fenster nicht geöffnet wurde.</p>
-      <p><strong>Warnung:</strong> Es wird empfohlen, nach Möglichkeit normale <code><a></code> Links zu verwenden, da <code>AMP.closeOrNavigateTo</code> von Webcrawlern nicht erkannt wird.</p>
+      <p><strong>Warnung:</strong> Es wird empfohlen, nach Möglichkeit normale <code>&lt;a&gt;</code> Links zu verwenden, da <code>AMP.closeOrNavigateTo</code> von Webcrawlern nicht erkannt wird.</p>
     </td>
   </tr>
   <tr>

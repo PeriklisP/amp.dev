@@ -10,7 +10,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -32,7 +32,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] Tài liệu này bàn về các hành động và sự kiện cho các website, câu chuyện và quảng cáo trong AMP. Đọc [Hành động và sự kiện trong email AMP](https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md) cho định dạng email AMP. [/tip]
+[tip type="note"] Tài liệu này bàn về các hành động và sự kiện cho các website, câu chuyện và quảng cáo trong AMP. Đọc [Hành động và sự kiện trong email AMP](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md) cho định dạng email AMP. [/tip]
 
 Thuộc tính `on` (bật) được sử dụng để cài đặt bộ xử lý sự kiện cho các yếu tố. Các sự kiện được hỗ trợ tùy thuộc vào yếu tố.
 
@@ -57,7 +57,7 @@ Xem bảng dưới đây để biết mô tả về từng phần của cú phá
   <tr>
     <td><code>targetId</code></td>
     <td>có</td>
-    <td>Đây là DOM ID cho yếu tố, hoặc một <a href="#special-targets">mục tiêu đặc biệt</a> được định nghĩa sẵn mà bạn muốn thực thi một hành động hoặc để đáp lại sự kiện. Trong ví dụ sau,  <code>targetId</code> là DOM ID của mục tiêu <code>amp-lightbox</code>, <code>photo-slides</code>. <pre><amp-lightbox id="photo-slides"></amp-lightbox> <button on="tap:photo-slides">Show Images</button></pre>
+    <td>Đây là DOM ID cho yếu tố, hoặc một <a href="#special-targets">mục tiêu đặc biệt</a> được định nghĩa sẵn mà bạn muốn thực thi một hành động hoặc để đáp lại sự kiện. Trong ví dụ sau,  <code>targetId</code> là DOM ID của mục tiêu <code>amp-lightbox</code>, <code>photo-slides</code>. <pre>&lt;amp-lightbox id="photo-slides">&lt;/amp-lightbox> &lt;button on="tap:photo-slides">Show Images&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -235,7 +235,7 @@ Ví dụ, những việc sau có thể được thực hiện trong AMP:
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Cập nhật bố cục của <code>amp-list</code> thành <code>layout="CONTAINTER"</code> để cho phép <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">đổi kích cỡ năng động</a>.</td>
+    <td>Cập nhật bố cục của <code>amp-list</code> thành <code>layout="CONTAINTER"</code> để cho phép <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">đổi kích cỡ năng động</a>.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code>(low-trust)</td>
@@ -674,15 +674,15 @@ Mục tiêu `AMP` được cung cấp bởi thời gian chạy AMP và triển k
   <tr>
     <td><code>navigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
-      <p>Điều hướng cửa sổ hiện tại đến URL được cho, đến mục tiêu được quy định (không bắt buộc) nếu được cho (hiện tại chỉ hỗ trợ <code>_top</code> (trên cùng) và <code>_blank </code> (trống)). Tham số <code>opener</code> (mở) có thể được quy định khi sử dụng mục tiêu là <code>_blank</code> (trống) để cho phép các trang mới được mở truy cập <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code></a>. Hỗ trợ <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md">thay thế URL tiêu chuẩn</a>.</p>
-      <p><strong>Lưu ý</strong>: Nên sử dụng các liên kết <code><a></code> bất cứ khi nào có thể bởi  <code>AMP.navigateTo</code> không được các web crawler công nhận.</p>
+      <p>Điều hướng cửa sổ hiện tại đến URL được cho, đến mục tiêu được quy định (không bắt buộc) nếu được cho (hiện tại chỉ hỗ trợ <code>_top</code> (trên cùng) và <code>_blank </code> (trống)). Tham số <code>opener</code> (mở) có thể được quy định khi sử dụng mục tiêu là <code>_blank</code> (trống) để cho phép các trang mới được mở truy cập <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/opener"><code>window.opener</code></a>. Hỗ trợ <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md">thay thế URL tiêu chuẩn</a>.</p>
+      <p><strong>Lưu ý</strong>: Nên sử dụng các liên kết <code>&lt;a&gt;</code> bất cứ khi nào có thể bởi  <code>AMP.navigateTo</code> không được các web crawler công nhận.</p>
     </td>
   </tr>
   <tr>
     <td><code>closeOrNavigateTo(url=STRING, target=STRING, opener=BOOLEAN)</code></td>
     <td>
       <p>Cố đóng cửa sổ nếu được cho phép, nếu không, nó sẽ điều hướng tương tự như Hành động <code>navigateTo</code>. Hữu ích cho các trường hợp sử dụng ở đó một nút "Quay lại" có thể là cần thiết để đóng cửa sổ nếu nó được mở trong một cửa sổ mới từ trang trước đó hoặc điều hướng nếu nó không được mở.</p>
-      <p><strong>Lưu ý:</strong> Sử dụng bình thường<code><a></a></code> liên kết được khuyến nghị nếu có thể vì <code>AMP.closeOrNavigateTo</code> không được trình thu thập dữ liệu web nhận dạng.</p>
+      <p><strong>Lưu ý:</strong> Sử dụng bình thường<code>&lt;a&gt;</a></code> liên kết được khuyến nghị nếu có thể vì <code>AMP.closeOrNavigateTo</code> không được trình thu thập dữ liệu web nhận dạng.</p>
     </td>
   </tr>
   <tr>

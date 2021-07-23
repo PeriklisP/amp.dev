@@ -8,7 +8,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -30,7 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] このドキュメントでは、AMP メール形式のアクションとイベントについて説明します。AMP ウェブサイト、ストーリー、および広告については、こちらの[アクションとイベント](https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md)を参照してください。 [/tip]
+[tip type="note"] このドキュメントでは、AMP メール形式のアクションとイベントについて説明します。AMP ウェブサイト、ストーリー、および広告については、こちらの[アクションとイベント](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md)を参照してください。 [/tip]
 
 `on` 属性は、要素にイベントハンドラをインストールするために使用されます。サポートされているイベントは、要素によって異なります。
 
@@ -55,8 +55,8 @@ eventName:targetId[.methodName[(arg1=value, arg2=value)]][/sourcecode]
   <tr>
     <td><code>targetId</code></td>
     <td>はい</td>
-    <td>これは要素の DOM id またはイベントのレスポンスとしてアクションを実行する事前定義済みの<a href="#special-targets">特殊ターゲット</a>です。次の例では、<code>targetId</code> は <code>amp-lightbox</code> ターゲットの DOM id である <code>photo-slides</code> です。     <pre><amp-lightbox id="photo-slides"></amp-lightbox>
-<button on="tap:photo-slides">Show Images</button></pre>
+    <td>これは要素の DOM id またはイベントのレスポンスとしてアクションを実行する事前定義済みの<a href="#special-targets">特殊ターゲット</a>です。次の例では、<code>targetId</code> は <code>amp-lightbox</code> ターゲットの DOM id である <code>photo-slides</code> です。     <pre>&lt;amp-lightbox id="photo-slides">&lt;/amp-lightbox>
+&lt;button on="tap:photo-slides">Show Images&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -437,7 +437,7 @@ AMP は、HTML 要素（AMP 要素を含む）でリスンできる `tap` イベ
   <tr>
     <td><code>changeToLayoutContainer</code></td>
     <td>
-<code>amp-list</code> のレイアウトを <code>layout="CONTAINTER"</code> に更新し、<a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">動的なサイズ変更</a>を行えるようにします。</td>
+<code>amp-list</code> のレイアウトを <code>layout="CONTAINTER"</code> に更新し、<a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">動的なサイズ変更</a>を行えるようにします。</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code>(低信頼)</td>

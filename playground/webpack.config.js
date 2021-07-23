@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
@@ -28,11 +28,12 @@ module.exports = (env, argv) => {
     },
     devtool: devMode ? 'inline-source-map' : false,
     resolve: {
+      alias: {
+        crypto: 'crypto-browserify',
+      },
       fallback: {
-        crypto: require.resolve('crypto-es'),
         util: require.resolve('util/util.js'),
         stream: require.resolve('stream-browserify'),
-        process: require.resolve('process/browser.js'),
       },
     },
     optimization: {
@@ -46,7 +47,7 @@ module.exports = (env, argv) => {
             },
           },
         }),
-        new OptimizeCSSAssetsPlugin(),
+        new CssMinimizerWebpackPlugin(),
       ],
       splitChunks: {
         cacheGroups: {
@@ -72,6 +73,10 @@ module.exports = (env, argv) => {
         'process.type': JSON.stringify(process.type),
         'process.version': JSON.stringify(process.version),
         global: '(typeof globalThis ? globalThis : self)',
+      }),
+      new webpack.ProvidePlugin({
+        Buffer: ['buffer', 'Buffer'],
+        process: ['process'],
       }),
       new CopyWebpackPlugin({
         patterns: [{from: path.join(__dirname, 'static/')}],

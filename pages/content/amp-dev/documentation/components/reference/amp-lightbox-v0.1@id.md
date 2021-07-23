@@ -87,7 +87,7 @@ Untuk menampilkan gambar di lightbox, ada juga komponen [`<amp-image-lightbox>`]
         <td width="40%"><strong>scrollable (opsional)</strong></td>
         <td>Apabila atribut <code>scrollable</code> ada, konten lightbox dapat di-scroll jika melebihi tinggi lightbox.
           <br><br>
-            <strong>Catatan</strong>: Atribut <code>scrollable</code> tidak diizinkan saat menggunakan <code><amp-lightbox></code> di dalam iklan AMPHTML. Untuk selengkapnya, baca bagian <a href="#a4a">Menggunakan amp-lightbox dalam iklan AMPHTML</a>.</td>
+            <strong>Catatan</strong>: Atribut <code>scrollable</code> tidak diizinkan saat menggunakan <code>&lt;amp-lightbox&gt;</code> di dalam iklan AMPHTML. Untuk selengkapnya, baca bagian <a href="#a4a">Menggunakan amp-lightbox dalam iklan AMPHTML</a>.</td>
           </tr>
           <tr>
             <td width="40%"><strong>scrollable (opsional)</strong></td>
@@ -151,7 +151,7 @@ Pada contoh di bawah, kami menunjukkan tampilan transisi untuk iklan AMPHTML den
 
 ##### Pada iframe yang sesuai (misalnya, yang berasal dari cache AMP) <a name="on-friendly-iframes-eg-coming-from-an-amp-cache"></a>
 
-<amp-img alt="iklan lightbox dalam iframe yang sesuai" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
+<amp-img alt="iklan lightbox dalam iframe yang sesuai" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
     <img alt="iklan lightbox dalam iframe yang sesuai" src="../../spec/img/lightbox-ad-fie.gif">
     </noscript>
@@ -159,7 +159,7 @@ Pada contoh di bawah, kami menunjukkan tampilan transisi untuk iklan AMPHTML den
 
 ##### Pada iframe pihak ketiga (misalnya, dari luar cache AMP) <a name="on-third-party-iframes-eg-outside-the-amp-cache"></a>
 
-<amp-img alt="iklan lightbox dalam iframe 3p" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
+<amp-img alt="iklan lightbox dalam iframe 3p" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
     <img alt="iklan lightbox dalam iframe 3p" src="../../spec/img/lightbox-ad-3p.gif">
     </noscript>

@@ -8,7 +8,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -30,7 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] Esta documentação cobre ações e eventos para o formato de e-mail AMP. Leia [Ações e eventos](https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md) para sites AMP, histórias e anúncios. [/tip]
+[tip type="note"] Esta documentação cobre ações e eventos para o formato de e-mail AMP. Leia [Ações e eventos](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md) para sites AMP, histórias e anúncios. [/tip]
 
 O atributo `on` é usado para instalar handlers de eventos em elementos. Os eventos que são suportados dependem do elemento.
 
@@ -55,7 +55,7 @@ Veja a tabela abaixo para descrições de cada parte da sintaxe.
   <tr>
     <td><code>targetId</code></td>
     <td>sim</td>
-    <td>Este é a id do DOM para o elemento, ou um <a href="#special-targets">alvo especial</a> predefinido sobre o qual você gostaria de executar uma ação em resposta ao evento. No exemplo a seguir, o <code>targetId</code> é o id do DOM para o alvo <code>amp-lightbox</code>, <code>photo-slides</code>. <pre><amp-lightbox id="photo-slides"></amp-lightbox> <button on="tap:photo-slides">Mostrar Imagens</button></pre>
+    <td>Este é a id do DOM para o elemento, ou um <a href="#special-targets">alvo especial</a> predefinido sobre o qual você gostaria de executar uma ação em resposta ao evento. No exemplo a seguir, o <code>targetId</code> é o id do DOM para o alvo <code>amp-lightbox</code>, <code>photo-slides</code>. <pre>&lt;amp-lightbox id="photo-slides">&lt;/amp-lightbox> &lt;button on="tap:photo-slides">Mostrar Imagens&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -427,7 +427,7 @@ Por exemplo, o seguinte é possível em AMP:
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Atualiza o layout de <code>amp-list</code> para <code>layout="CONTAINTER"</code> para permitir <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">redimensionamento dinâmico</a>.</td>
+    <td>Atualiza o layout de <code>amp-list</code> para <code>layout="CONTAINTER"</code> para permitir <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">redimensionamento dinâmico</a>.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code> (baixa confiança)</td>

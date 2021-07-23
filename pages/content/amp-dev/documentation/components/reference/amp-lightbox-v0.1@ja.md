@@ -86,7 +86,7 @@ teaser:
         <td width="40%"><strong>scrollable（省略可）</strong></td>
         <td><code>scrollable</code> 属性が存在する場合、ライトボックスのコンテンツは、ライトボックスの高さをオーバーフローしてスクロールできます。
           <br><br>
-            <strong>注</strong>: AMPHTML 広告内で <code><amp-lightbox></code> を使用する場合、<code>scrollable</code> 属性は使用できません。詳細については、<a href="#a4a">AMPHTML 広告内で amp-lightbox を使用する</a>をご覧ください。</td>
+            <strong>注</strong>: AMPHTML 広告内で <code>&lt;amp-lightbox&gt;</code> を使用する場合、<code>scrollable</code> 属性は使用できません。詳細については、<a href="#a4a">AMPHTML 広告内で amp-lightbox を使用する</a>をご覧ください。</td>
           </tr>
           <tr>
             <td width="40%"><strong>scrollable（省略可）</strong></td>
@@ -150,7 +150,7 @@ AMPHTML 広告がサードパーティ環境（非 AMP ドキュメントなど�
 
 ##### Friendly iframe の場合（AMP キャッシュ内の iframe など） <a name="on-friendly-iframes-eg-coming-from-an-amp-cache"></a>
 
-<amp-img alt="Friendly iframe 内のライトボックス広告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-fie.gif" layout="fixed">
+<amp-img alt="Friendly iframe 内のライトボックス広告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-fie.gif" layout="fixed">
   <noscript>
     <img alt="Friendly iframe 内のライトボックス広告" src="../../spec/img/lightbox-ad-fie.gif">
     </noscript>
@@ -158,7 +158,7 @@ AMPHTML 広告がサードパーティ環境（非 AMP ドキュメントなど�
 
 ##### サードパーティ iframe の場合（AMP キャッシュ外の iframe など） <a name="on-third-party-iframes-eg-outside-the-amp-cache"></a>
 
-<amp-img alt="サードパーティ iframe 内のライトボックス広告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/master/spec/img/lightbox-ad-3p.gif" layout="fixed">
+<amp-img alt="サードパーティ iframe 内のライトボックス広告" width="360" height="480" src="https://github.com/ampproject/amphtml/raw/main/docs/spec/img/lightbox-ad-3p.gif" layout="fixed">
   <noscript>
     <img alt="サードパーティ iframe 内のライトボックス広告" src="../../spec/img/lightbox-ad-3p.gif">
     </noscript>

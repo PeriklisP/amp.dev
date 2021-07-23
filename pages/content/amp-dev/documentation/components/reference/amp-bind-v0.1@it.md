@@ -528,7 +528,7 @@ Note sulle associazioni:
       <td>Vedi gli <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#Attributes">attributi options</a> corrispondenti.</td>
     </tr>
     <tr>
-      <td><code><&lt;optgroup&gt;</code></td>
+      <td><code>&lt;optgroup&gt;</code></td>
       <td><code>[disabled]</code><br><code>[label]</code></td>
       <td>Vedi gli <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup#Attributes">attributi optgroup</a> corrispondenti.</td>
     </tr>
@@ -657,7 +657,7 @@ AMP raggruppa le XMLHttpRequests (XHR) negli endpoint JSON, ovvero puoi utilizza
   <tr>
     <td width="40%"><strong>src</strong></td>
     <td>L'URL dell'endpoint remoto che restituirà il JSON per aggiornare questo <code>amp-state</code>. Deve essere un servizio HTTP CORS.
-        L'attributo <code>src</code> consente tutte le sostituzioni di variabili URL standard. Per ulteriori informazioni, consulta la <a href="https://github.com/ampproject/amphtml/blob/main/spec/amp-var-substitutions.md">Guida alle sostituzioni</a>.
+        L'attributo <code>src</code> consente tutte le sostituzioni di variabili URL standard. Per ulteriori informazioni, consulta la <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md">Guida alle sostituzioni</a>.
         [tip type="important"]
       L'endpoint deve implementare i requisiti specificati nella specifica <a href="../../../documentation/guides-and-tutorials/learn/amp-caches-and-cors/amp-cors-requests.md">Richieste CORS in AMP</a>.
       [/tip]</td>

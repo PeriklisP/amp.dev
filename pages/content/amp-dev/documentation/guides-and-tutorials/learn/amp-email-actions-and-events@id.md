@@ -8,7 +8,7 @@ teaser:
 ---
 
 <!--
-This file is imported from https://github.com/ampproject/amphtml/blob/main/spec/amp-email-actions-and-events.md.
+This file is imported from https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-email-actions-and-events.md.
 Please do not change this file.
 If you have found a bug or an issue please
 have a look and request a pull request there.
@@ -30,7 +30,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-[tip type="note"] Dokumentasi ini mencakup tindakan dan peristiwa untuk format email AMP. Bacalah [Tindakan dan peristiwa](https://github.com/ampproject/amphtml/blob/main/spec/amp-actions-and-events.md) untuk iklan, cerita, dan situs web AMP.[/tip]
+[tip type="note"] Dokumentasi ini mencakup tindakan dan peristiwa untuk format email AMP. Bacalah [Tindakan dan peristiwa](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-actions-and-events.md) untuk iklan, cerita, dan situs web AMP.[/tip]
 
 Atribut `on` digunakan untuk menginstal pengurus (handler) peristiwa pada elemen. Peristiwa-peristiwa yang didukung bergantung pada elemen.
 
@@ -55,8 +55,8 @@ Lihat tabel di bawah ini untuk mengetahui deskripsi setiap bagian sintaks.
   <tr>
     <td><code>targetId</code></td>
     <td>ya</td>
-    <td>Ini adalah ID DOM untuk elemen tersebut, atau <a href="#special-targets">target khusus</a> yang telah ditentukan sebelumnya yang ingin Anda tindak lanjuti sebagai tanggapan atas peristiwa tersebut. Di dalam contoh berikut ini, <code>targetId</code> adalah ID DOM dari target <code>amp-lightbox</code>, <code>photo-slides</code>. <pre><amp-lightbox id = "photo-slides"> </amp-lightbox>
-<button on = "tap: photo-slides"> Tampilkan Gambar</button></pre>
+    <td>Ini adalah ID DOM untuk elemen tersebut, atau <a href="#special-targets">target khusus</a> yang telah ditentukan sebelumnya yang ingin Anda tindak lanjuti sebagai tanggapan atas peristiwa tersebut. Di dalam contoh berikut ini, <code>targetId</code> adalah ID DOM dari target <code>amp-lightbox</code>, <code>photo-slides</code>. <pre>&lt;amp-lightbox id = "photo-slides"> &lt;/amp-lightbox>
+&lt;button on = "tap: photo-slides"> Tampilkan Gambar&lt;/button></pre>
 </td>
   </tr>
   <tr>
@@ -426,7 +426,7 @@ Contohnya, yang berikut ini mungkin dilakukan di AMP:
   </tr>
   <tr>
     <td><code>changeToLayoutContainer</code></td>
-    <td>Perbarui tata letak <code>amp-list</code> ke <code>layout="CONTAINTER"</code> untuk memungkinkan <a href="https://github.com/ampproject/amphtml/blob/main/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">pengubahan ukuran dinamis</a>.</td>
+    <td>Perbarui tata letak <code>amp-list</code> ke <code>layout="CONTAINTER"</code> untuk memungkinkan <a href="https://github.com/ampproject/amphtml/blob/main/docs/spec/../extensions/amp-list/amp-list.md#dynamic-resizing">pengubahan ukuran dinamis</a>.</td>
   </tr>
   <tr>
     <td> <code>fetch-error</code> (kepercayaan rendah)</td>

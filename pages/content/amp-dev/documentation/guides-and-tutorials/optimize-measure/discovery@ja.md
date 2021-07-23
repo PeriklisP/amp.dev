@@ -14,7 +14,7 @@ teaser:
 
 たとえばニュース記事などで、同じページの非 AMP バージョンと AMP バージョンの両方を用意する場合があります。Google 検索がそのページの非 AMP バージョンを検出した場合、AMP バージョンがあることをどのように認識するのでしょうか。この問題について検討してみましょう。
 
-### <link> でページをリンクする
+### &lt;link&gt; でページをリンクする
 
 この問題を解決するには、`<head>` 内の `<link>` タグを使用して、AMP ページに関する情報と非 AMP ページに関する情報を互いのページに追加します。
 
@@ -91,7 +91,7 @@ teaser:
 
 [/sourcecode]
 
-[ampproject の examples フォルダ](https://github.com/ampproject/amphtml/tree/master/examples/metadata-examples)には、代替の HTML 属性構文など、このほかにもサンプルが用意されています。
+[ampproject の examples フォルダ](https://github.com/ampproject/amphtml/tree/main/examples/metadata-examples)には、代替の HTML 属性構文など、このほかにもサンプルが用意されています。
 
 [tip type="read-on"] 構造化データについて詳しくは、次の関連資料をご覧ください。
 
